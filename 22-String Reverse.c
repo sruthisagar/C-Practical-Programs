@@ -4,9 +4,10 @@
 
 char* reverse(char *str)
 {
+	static char rev[50];
 	int c,i;
 	for(c=0;str[c]!='\0';c++);
-	char* rev = (char*) malloc(c* sizeof(char));
+	//char* rev = (char*) malloc(c* sizeof(char));
 	for(i=0;i<c;i++)
 		rev[i]=str[c-i-1];
 	return rev;
